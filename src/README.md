@@ -11,10 +11,10 @@ A super simple FastAPI application that allows students to view and sign up for 
 
 From the repository root:
 
-1. Install runtime and development dependencies:
+1. Install the dependencies, including pytest:
 
    ```bash
-   python -m pip install -r requirements-dev.txt
+   python -m pip install -r requirements.txt
    ```
 
 2. Run the application:
