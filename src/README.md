@@ -9,21 +9,31 @@ A super simple FastAPI application that allows students to view and sign up for 
 
 ## Getting Started
 
-1. Install the dependencies:
+From the repository root:
 
-   ```
-   pip install fastapi uvicorn
+1. Install runtime and development dependencies:
+
+   ```bash
+   python -m pip install -r requirements-dev.txt
    ```
 
 2. Run the application:
 
-   ```
-   python app.py
+   ```bash
+   python -m uvicorn src.app:app --reload
    ```
 
 3. Open your browser and go to:
    - API documentation: http://localhost:8000/docs
    - Alternative documentation: http://localhost:8000/redoc
+
+## Tests
+
+Run the backend tests from the repository root:
+
+```bash
+python -m pytest
+```
 
 ## API Endpoints
 
@@ -31,6 +41,7 @@ A super simple FastAPI application that allows students to view and sign up for 
 | ------ | ----------------------------------------------------------------- | ------------------------------------------------------------------- |
 | GET    | `/activities`                                                     | Get all activities with their details and current participant count |
 | POST   | `/activities/{activity_name}/signup?email=student@mergington.edu` | Sign up for an activity                                             |
+| DELETE | `/activities/{activity_name}/signup?email=student@mergington.edu` | Unregister from an activity                                         |
 
 ## Data Model
 
